@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    table {
+      margin: 1rem 0;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="Search authors..." id="author-search">
+
+  <form id="author-form">
+    <input type="text" name="name" placeholder="Name...">
+    <input type="text" name="genre" placeholder="Genre...">
+    <input type="text" name="book" placeholder="Book...">
+    <input type="submit" value="Add new author">
+  </form >
+
+  <table id="author-table">
+    <tr>
+      <th>Name</th>
+      <th>Genre</th>
+      <th>Books</th>
+    </tr>
+  </table>
+
+  <hr>
+
+  <input type="text" placeholder="Search books..." id="book-search">
+
+  <form id="book-form">
+    <input type="text" name="title" placeholder="Title...">
+    <input type="text" name="genre" placeholder="Genre...">
+    <input type="text" name="author" placeholder="Author...">
+    <input type="submit" value="Add new book">
+  </form>
+
+  <table id="book-table">
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Author</th>
+    </tr>
+  </table>
+
+  <hr>
+
+  <script src="main.js"></script>
+</body>
+</html>

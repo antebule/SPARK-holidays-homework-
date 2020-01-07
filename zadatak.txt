@@ -1,0 +1,34 @@
+1. zadatak
+Napravite klasu Person koju koristimo kako bi inicijalizirali objekte sa 'name' property-em. (samo jedna vrijednost prosljeđena u konstruktor)
+Napravite klasu Author koja nasljeđuje klasu Person sa dodatnim svojstvima 'book' i 'genre'.
+Napravite klasu Books koju koristimo za inicijalizaciju objekata sa 'title', 'genre' i 'author' property-ima.
+Dodatno:
+Iskoristite napravljene klase za naredni zadatak.
+
+2. zadatak
+Koristeći module ili revealing module pattern napravite knjižnicu (Library) unutar koje možemo spremati knjige unutar privatne varijable 'books' i autore unutar privatne varijable 'authors'.
+Javne metode koje funkcija mora otkrivati su addBook, addAuthor, searchBooks, searchAuthors.
+Metode za nadodavanje itema možete uraditi na više načina, ali svaki od nadodanih itema mora ispunjavati ovaj oblik objekta (TypeScript interface):
+
+interface Book {
+  title: string;
+  genre: string;
+  author: string;
+}
+
+interface Author {
+  name: string;
+  genre: string;
+  book: string;
+}
+
+U principu, svaki uneseni objekt u privatne varijable books ili authors putem javnih metoda mora sadržavati te property-e, makar vrijednosti tih property-a bile undefined.
+Klase u prethodnom zadatku ispunjavaju ove interface-ove, što znači da ih možete koristiti.
+Metodama searchBooks i searchAuthors zapravo činimo javno dostupnim sve podatke unutar varijabli books i authors.
+Obje search metode primaju parametar tipa string kojim filtriramo books ili authors kako bi izvukli tražene knjige, odnosno autore.
+Unutar tih metoda koristimo .filter funkciju, dinamičku regular ekspresiju (new RegExp), a knjige, odnosno autore filtriramo po title, odnosno name propertyu.
+
+3. zadatak
+Spojite funkcionalnosti navedene u prethodnim zadatcima sa priloženom html datotekom.
+Nadodavanjem itema u odgovarajuću varijablu, automatski se item mora prikazati u odgovarajuću tablicu.
+Prilikom unošenja vrijednosti u odgovarajući input, odgovarajuća tablica se mora automatski ažurirati.
